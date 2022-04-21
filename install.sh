@@ -2,7 +2,7 @@
 
 install_alacritty() {
     if [[ `whereis alacritty` ]]; then
-        echo -e "\e[0;32m---Backup your Alacritty Conf---+\e[0m\n"
+        echo -e "\e[0;32m+---Backup your Alacritty Conf---+\e[0m\n"
         if [[ `ls ~/.config/alacritty` ]]; then
             mv ~/.config/alacritty ~/.config/ALACRITTY.BAK
             mkdir -p ~/.config/alacritty
