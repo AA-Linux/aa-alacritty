@@ -1,0 +1,59 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+# Check - https://github.com/alacritty/alacritty
+# ~----------------------------------------------------------~
+
+# --- Import files (Colors, Fonts, etc) --->
+import:
+  - ~/.config/alacritty/fonts.yml
+  - ~/.config/alacritty/colors.yml
+  - ~/.config/alacritty/keybinds.yml
+
+window:
+  dimensions:
+    columns: 100
+    lines: 85
+
+  padding:
+    x: 10
+    y: 10
+
+  dynamic_padding: false
+
+  opacity: 1.0
+
+scrolling:
+  history: 10000
+
+draw_bold_text_with_bright_colors: false
+
+custom_cursor_colors: true
+
+bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  hide_when_typing: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+  save_to_clipboard: false
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+cursor:
+  style: Underline
+
+  unfocused_hollow: true
+
+live_config_reload: true
+
+shell:
+  # program: /bin/bash
+  program: /usr/bin/zsh
